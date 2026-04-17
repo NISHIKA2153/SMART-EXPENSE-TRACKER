@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Expense Tracker</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="hero">
+    <h1>Smart Expense Tracker</h1>
+    <p>AI-powered expense categorization & fraud alerts</p>
+
+    <div class="hero-buttons">
+        <a href="/dashboard" class="btn btn-outline">View Dashboard</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="card glass">
+        <h2>Analyze Transaction</h2>
+        <p class="small-text">Paste your UPI / SMS transaction message</p>
+
+        <form method="post">
+            <textarea name="message"
+                placeholder="Rs.1200 debited via UPI to Amazon"
+                required></textarea>
+
+            <button type="submit" class="btn btn-primary">

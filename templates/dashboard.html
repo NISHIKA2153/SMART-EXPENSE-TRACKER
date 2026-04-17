@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Dashboard</title>
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="hero dark">
+    <h1>Expense Analytics Dashboard</h1>
+    <p>Insights generated using Machine Learning</p>
+</div>
+
+<div class="container">
+
+    <!-- KPI CARDS -->
+    <div class="stats">
+        <div class="stat-card">
+            <h3>Total Transactions</h3>
+            <p>{{ tables.count("tr") - 1 }}</p>
+        </div>
+        <div class="stat-card warning">
+            <h3>Anomaly Alerts</h3>
+            <p>Auto-Detected</p>
+        </div>
+        <div class="stat-card success">
+            <h3>ML Categories</h3>
+            <p>Food • Travel • Bills</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Spending by Category</h2>
+        <img src="/static/category.png" class="chart">
+    </div>
+
+    <div class="card">
+        <h2>Transaction History</h2>
+        <div class="table-container enhanced-table">
+            {{ tables|safe }}
+        </div>
+    </div>
+
+    <a href="/" class="btn btn-outline center">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
